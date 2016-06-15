@@ -1,0 +1,19 @@
+docker pull lukasz/docker-scala : pull docker 
+docker images: xem danh sách các images trong máy
+git clone https://github.com/huydx/scalresume.git /Users/huy/Code : git clone source side /Users/huy/Code
+
+docker run -v /Users/huy/Code:/src -it lukasz/docker-scala /bin/bash
+
+    docker run : lệnh tạo một container cho Docker
+    tham số -v /Users/huy/Code:/src: để liên kết thư mục /Users/huy/Code ở máy tính hiện tại, vào thư mục /src của container.
+    tham số -it lukasz/docker-scala /bin/bash: Để chỉ định images cần tạo là lukasz/docker-scala và tự động chạy lệnh /bin/bash sau khi khởi tạo xong, nhờ đó chúng ta sẽ truy cập được vào chế độ dòng lệnh của container và quản lý nó giống như một máy tính thông thường.
+docker run -v /abc:/abc -p 80:80 -it ubuntu /bin/bash
+ệnh trên map cổng 80 của container ra cổng 80 của máy tính hiện tại.
+docker ps: danh sách các container đang chạy
+docker ps -a: danh sách các container đang chạy và đã t
+docker start <ID hoặc NAME>
+docker exec -it <ID hoặc NAME> /bin/bash
+docker rm <ID hoặc NAME>
+docker rm -f <ID hoặc NAME>
+docker rmi <ID hoặc NAME>
+docker rmi -f <ID hoặc NAME>
